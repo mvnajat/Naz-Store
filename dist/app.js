@@ -142,7 +142,7 @@ function showRoute() {
   $("account-detail-page").hidden = !account;
   $("orders-page").hidden = !isOrders;
   document.querySelectorAll("[data-nav]").forEach(link => {
-    const active = (link.dataset.nav === "home" && !isOrders && !account && hash !== "#how-it-works" && hash !== "#accounts") || (link.dataset.nav === "accounts" && (hash === "#accounts" || Boolean(account))) || (link.dataset.nav === "orders" && isOrders) || (link.dataset.nav === "how-it-works" && hash === "#how-it-works");
+    const active = (link.dataset.nav === "home" && !isOrders && !account && hash !== "#how-it-works" && hash !== "#accounts" && hash !== "#events") || (link.dataset.nav === "events" && hash === "#events") || (link.dataset.nav === "accounts" && (hash === "#accounts" || Boolean(account))) || (link.dataset.nav === "orders" && isOrders) || (link.dataset.nav === "how-it-works" && hash === "#how-it-works");
     link.classList.toggle("nav-active", active);
     if (active) link.setAttribute("aria-current", "page"); else link.removeAttribute("aria-current");
   });
@@ -150,8 +150,8 @@ function showRoute() {
   if (account) renderAccountDetail(account);
   if (isOrders) renderRecentOrders();
   window.scrollTo({top:0,behavior:"instant"});
-  if (hash === "#games" || hash === "#how-it-works" || hash === "#accounts") {
-    const target = hash === "#games" ? "games" : hash === "#accounts" ? "accounts" : "how-section";
+  if (hash === "#games" || hash === "#how-it-works" || hash === "#accounts" || hash === "#events") {
+    const target = hash === "#games" ? "games" : hash === "#accounts" ? "accounts" : hash === "#events" ? "events" : "how-section";
     requestAnimationFrame(() => $(target).scrollIntoView({behavior:"smooth",block:"start"}));
   }
   if (slug && !game) location.replace("#games");
@@ -189,7 +189,40 @@ function submitDemoOrder() {
 
 function closeModal() { $("success-modal").hidden = true; }
 
+// Status event mengikuti tanggal dengan offset WIB; kontennya diperbarui manual.
+const pbEvents = [
+  { prefix: "season", start: "2026-11-03T00:00:00+07:00", end: "2026-12-22T23:59:00+07:00" },
+  { prefix: "sale", start: "2026-11-03T00:00:00+07:00", end: "2026-11-09T23:59:00+07:00" }
+];
+function updateEventStatus() {
+  const now = Date.now();
+  pbEvents.forEach(event => {
+    const badge = $(event.prefix + "-status");
+    const start = Date.parse(event.start);
+    const end = Date.parse(event.end);
+    const live = now >= start && now <= end;
+    const past = now > end;
+    badge.textContent = live ? "● BERLANGSUNG" : past ? "SUDAH BERAKHIR" : "SEGERA HADIR";
+    badge.classList.toggle("event-ended", past);
+    badge.classList.toggle("event-upcoming", !past && !live);
+  });
+  const sale = pbEvents[1];
+  const remaining = $("sale-remaining");
+  const timeLeft = Date.parse(sale.end) - now;
+  if (timeLeft >= 0 && now >= Date.parse(sale.start)) {
+    const days = Math.floor(timeLeft / 86400000);
+    const hours = Math.floor((timeLeft % 86400000) / 3600000);
+    remaining.textContent = "Sisa " + days + " hari " + hours + " jam";
+  } else if (timeLeft < 0) {
+    remaining.textContent = "Promo selesai";
+  } else {
+    remaining.textContent = "Mulai 3 November 2026";
+  }
+}
+
 $("current-year").textContent = new Date().getFullYear();
+updateEventStatus();
+setInterval(updateEventStatus, 60000);
 $("game-search").addEventListener("input", renderCatalog);
 $("account-search").addEventListener("input", renderAccounts);
 $("category-tabs").addEventListener("click", event => {
