@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080e1c" />
+    <meta name="description" content="Naz-Store, prototipe toko top up game dengan katalog, pilihan nominal, dan simulasi pesanan." />
+    <title>Naz-Store | Top Up Game Favoritmu</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement" role="status">
+      <span class="pulse-dot"></span>
+      <span>NAZ-STORE PREVIEW</span>
+      <span class="announcement-divider">/</span>
+      <span>Website demo — belum menerima pembayaran</span>
+    </div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Naz-Store beranda">
+          <span class="brand-icon"><span>N</span></span>
+          <span>NAZ<span class="brand-accent">.</span>STORE</span>
+        </a>
+        <nav class="main-nav" aria-label="Navigasi utama">
+          <a href="#home" data-nav="home" class="nav-active">Beranda</a>
+          <a href="#how-it-works" data-nav="how-it-works">Cara Top Up</a>
+          <a href="#orders" data-nav="orders">Cek Pesanan</a>
+        </nav>
+        <div class="header-actions">
+          <span class="header-secure"><span class="secure-icon">✦</span> Digital Game Hub</span>
+          <a class="button button-small button-outline" href="#orders">Lacak Pesanan <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="home-page" id="home-page" aria-label="Beranda Naz-Store">
+        <div class="container">
+          <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+              <div class="eyebrow"><span class="eyebrow-line"></span> TEMPAT GAMER BERKUMPUL</div>
+              <h1 id="hero-title">Level up your game.<br /><span>Play without limits.</span></h1>
+              <p>Pilih game favoritmu, tentukan nominal, dan nikmati pengalaman top-up yang simpel. Semua dalam satu tempat.</p>
+              <div class="hero-actions">
+                <a href="#games" class="button button-primary">Jelajahi Game <span aria-hidden="true">↗</span></a>
+                <a href="#how-it-works" class="button button-ghost">Cara Kerjanya <span aria-hidden="true">→</span></a>
+              </div>
+              <div class="hero-proof"><span class="proof-symbol">✧</span><span>Rancangan modern</span><span class="proof-separator"></span><span>Responsif di semua layar</span></div>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+              <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+              <span class="art-star star-one">✦</span><span class="art-star star-two">✧</span><span class="art-star star-three">✦</span>
+              <div class="art-chip chip-top"><span>⚡</span> INSTANT VIBES</div>
+              <div class="art-core"><div class="art-core-inner"><span>NAZ</span><strong>PLAY</strong></div></div>
+              <div class="art-chip chip-bottom"><span>◈</span> NEXT LEVEL</div>
+            </div>
+          </section>
+
+          <div class="feature-strip" aria-label="Keunggulan Naz-Store">
+            <div><span class="feature-icon">⚡</span><span><strong>Alur Cepat</strong><small>Pilih dan pesan dalam beberapa langkah</small></span></div>
+            <div><span class="feature-icon">◈</span><span><strong>Banyak Pilihan</strong><small>Game populer dalam satu katalog</small></span></div>
+            <div><span class="feature-icon">✧</span><span><strong>Mobile Friendly</strong><small>Nyaman dipakai di mana saja</small></span></div>
+          </div>
+
+          <section class="catalog-section" id="games" aria-labelledby="catalog-title">
+            <div class="section-heading">
+              <div><span class="section-kicker">PILIH DUNIAMU</span><h2 id="catalog-title">Game <span>Populer.</span></h2><p>Temukan game favoritmu dan mulai dari sini.</p></div>
+              <div class="catalog-search"><span aria-hidden="true">⌕</span><label class="sr-only" for="game-search">Cari game</label><input id="game-search" type="search" placeholder="Cari game favoritmu..." autocomplete="off" /></div>
+            </div>
+            <div class="category-tabs" id="category-tabs" role="group" aria-label="Kategori game">
+              <button class="category-chip active" data-category="Semua" aria-pressed="true">Semua Game</button>
+              <button class="category-chip" data-category="MOBA" aria-pressed="false">MOBA</button>
+              <button class="category-chip" data-category="Battle Royale" aria-pressed="false">Battle Royale</button>
+              <button class="category-chip" data-category="PC & Lainnya" aria-pressed="false">PC & Lainnya</button>
+            </div>
+            <div class="game-grid" id="game-grid" aria-live="polite"></div>
+            <p class="no-results" id="no-results" hidden>Game tidak ditemukan. Coba kata kunci lain.</p>
+            <p class="catalog-note">* Produk dan harga pada prototipe ini hanya contoh untuk pembelajaran.</p>
+          </section>
+
+          <section class="how-section" id="how-section" aria-labelledby="how-title">
+            <div class="how-header"><span class="section-kicker">GAMPANG BANGET</span><h2 id="how-title">Top up dalam <span>3 langkah.</span></h2></div>
+            <div class="steps-grid">
+              <article class="step-card"><span class="step-number">01</span><span class="step-emoji">🎮</span><h3>Pilih Game</h3><p>Temukan game yang ingin kamu isi, lalu buka daftar nominalnya.</p></article>
+              <article class="step-card"><span class="step-number">02</span><span class="step-emoji">✦</span><h3>Isi Detail</h3><p>Pilih paket dan masukkan ID akun game dengan benar.</p></article>
+              <article class="step-card"><span class="step-number">03</span><span class="step-emoji">⚡</span><h3>Review Pesanan</h3><p>Periksa rincian dan buat simulasi pesanan. Pembayaran belum aktif.</p></article>
+            </div>
+          </section>
+
+          <section class="cta-banner"><div><span class="section-kicker">SIAP MAIN LAGI?</span><h2>Petualangan berikutnya<br />dimulai dari sini.</h2></div><a href="#games" class="button button-light">Pilih Game <span aria-hidden="true">↗</span></a></section>
+        </div>
+      </section>
+
+      <section class="detail-page container" id="detail-page" hidden aria-labelledby="detail-title">
+        <a class="back-link" href="#games">← Kembali ke semua game</a>
+        <div class="detail-intro" id="detail-intro"></div>
+        <div class="checkout-layout">
+          <div class="checkout-main">
+            <section class="checkout-panel" aria-labelledby="package-title">
+              <div class="panel-title"><span class="number-pill">01</span><div><h2 id="package-title">Pilih Nominal</h2><p>Pilih paket yang kamu inginkan.</p></div></div>
+              <div class="package-grid" id="package-grid"></div>
+            </section>
+            <section class="checkout-panel" aria-labelledby="account-title">
+              <div class="panel-title"><span class="number-pill">02</span><div><h2 id="account-title">Data Akun Game</h2><p>Masukkan ID akun game yang akan diisi.</p></div></div>
+              <div class="fields-grid"><label class="field"><span>User ID <span class="required">*</span></span><input id="player-id" type="text" maxlength="32" placeholder="Contoh: 12345678" autocomplete="off" required /></label><label class="field" id="zone-field"><span>Zone / Server ID</span><input id="zone-id" type="text" maxlength="24" placeholder="Contoh: 1234" autocomplete="off" /></label></div>
+              <p class="field-help">Gunakan data contoh untuk mencoba simulasi. Tidak ada data dikirim ke server.</p>
+            </section>
+            <section class="checkout-panel" aria-labelledby="payment-title">
+              <div class="panel-title"><span class="number-pill">03</span><div><h2 id="payment-title">Metode Pembayaran</h2><p>Pilihan di bawah hanya untuk demonstrasi.</p></div></div>
+              <div class="payment-options" id="payment-options">
+                <label class="payment-option"><input type="radio" name="payment" value="QRIS (Demo)" checked /><span class="payment-symbol">▦</span><span><strong>QRIS</strong><small>Simulasi scan QR</small></span><span class="radio-dot"></span></label>
+                <label class="payment-option"><input type="radio" name="payment" value="Transfer Bank (Demo)" /><span class="payment-symbol">▤</span><span><strong>Transfer Bank</strong><small>Simulasi transfer</small></span><span class="radio-dot"></span></label>
+                <label class="payment-option"><input type="radio" name="payment" value="E-Wallet (Demo)" /><span class="payment-symbol">◉</span><span><strong>E-Wallet</strong><small>Simulasi dompet digital</small></span><span class="radio-dot"></span></label>
+              </div>
+            </section>
+          </div>
+          <aside class="order-summary" aria-labelledby="summary-title">
+            <div class="summary-top"><span class="summary-label">RINGKASAN</span><h2 id="summary-title">Pesanan Kamu</h2><p>Periksa detail sebelum melanjutkan.</p></div>
+            <div id="summary-product" class="summary-product"></div>
+            <div class="summary-line"><span>Harga produk</span><strong id="summary-price">Rp0</strong></div>
+            <div class="summary-line"><span>Biaya layanan</span><strong>Rp0</strong></div>
+            <div class="summary-total"><span>Total Harga</span><strong id="summary-total">Rp0</strong></div>
+            <button class="button button-primary summary-submit" id="submit-order" type="button">Buat Pesanan Demo <span aria-hidden="true">↗</span></button>
+            <p class="demo-warning">⚠ Ini hanya simulasi. Tidak ada pembayaran atau top-up sungguhan.</p>
+            <p class="form-error" id="form-error" role="alert" hidden></p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="orders-page container" id="orders-page" hidden aria-labelledby="orders-title">
+        <a class="back-link" href="#home">← Kembali ke beranda</a>
+        <div class="orders-header"><span class="section-kicker">PANTAU PESANAN</span><h1 id="orders-title">Cek <span>Pesanan.</span></h1><p>Masukkan kode pesanan demo untuk melihat ringkasannya. Data hanya tersimpan di browser ini.</p></div>
+        <form class="order-lookup" id="order-lookup-form"><label class="sr-only" for="order-code">Kode pesanan</label><input id="order-code" placeholder="Contoh: NAZ-ABC123" autocomplete="off" /><button type="submit" class="button button-primary">Cari Pesanan →</button></form>
+        <div id="order-lookup-result" aria-live="polite"></div>
+        <div class="recent-orders" id="recent-orders"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-inner"><div><a class="brand" href="#home"><span class="brand-icon"><span>N</span></span><span>NAZ<span class="brand-accent">.</span>STORE</span></a><p>Tempat semua gamers memulai petualangan berikutnya.</p></div><div class="footer-links"><a href="#games">Katalog Game</a><a href="#how-it-works">Cara Top Up</a><a href="#orders">Cek Pesanan</a></div></div><div class="container footer-bottom"><span>© <span id="current-year">2026</span> Naz-Store. Dibuat untuk belajar web development.</span><span>Prototype • Not for real transactions</span></div></footer>
+
+    <div class="modal-backdrop" id="success-modal" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-icon">✓</div><span class="section-kicker">SIMULASI BERHASIL</span><h2 id="modal-title">Pesanan demo dibuat!</h2><p>Pesanan ini hanya tersimpan di browsermu. Belum ada pembayaran atau pengiriman item game.</p><div class="modal-code" id="created-order-code"></div><button class="button button-primary" id="view-created-order">Lihat Pesanan →</button><button class="modal-close" id="modal-close">Kembali ke Katalog</button></div></div>
+  </body>
+</html>
