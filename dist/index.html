@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#080e1c" />
-    <meta name="description" content="Naz-Store, prototipe toko top up game dengan katalog, pilihan nominal, dan simulasi pesanan." />
-    <title>Naz-Store | Top Up Game Favoritmu</title>
+    <meta name="description" content="Naz-Store, prototipe khusus Point Blank: top up PB Cash, voucher, dan katalog karakter PB fiktif." />
+    <title>Naz-Store | Point Blank Hub</title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="./app.js" defer></script>
   </head>
@@ -25,6 +25,7 @@
         </a>
         <nav class="main-nav" aria-label="Navigasi utama">
           <a href="#home" data-nav="home" class="nav-active">Beranda</a>
+          <a href="#accounts" data-nav="accounts">Char PB</a>
           <a href="#how-it-works" data-nav="how-it-works">Cara Top Up</a>
           <a href="#orders" data-nav="orders">Cek Pesanan</a>
         </nav>
@@ -40,12 +41,12 @@
         <div class="container">
           <section class="hero" aria-labelledby="hero-title">
             <div class="hero-copy">
-              <div class="eyebrow"><span class="eyebrow-line"></span> TEMPAT GAMER BERKUMPUL</div>
-              <h1 id="hero-title">Level up your game.<br /><span>Play without limits.</span></h1>
-              <p>Pilih game favoritmu, tentukan nominal, dan nikmati pengalaman top-up yang simpel. Semua dalam satu tempat.</p>
+              <div class="eyebrow"><span class="eyebrow-line"></span> KHUSUS TROOPERS POINT BLANK</div>
+              <h1 id="hero-title">Your Point Blank hub.<br /><span>Ready for action.</span></h1>
+              <p>Satu tempat untuk menjelajahi pilihan PB Cash, voucher, dan katalog contoh karakter Point Blank. Dibangun khusus untuk komunitas Troopers.</p>
               <div class="hero-actions">
-                <a href="#games" class="button button-primary">Jelajahi Game <span aria-hidden="true">↗</span></a>
-                <a href="#how-it-works" class="button button-ghost">Cara Kerjanya <span aria-hidden="true">→</span></a>
+                <a href="#games" class="button button-primary">Top Up PB <span aria-hidden="true">↗</span></a>
+                <a href="#accounts" class="button button-ghost">Lihat Char PB <span aria-hidden="true">→</span></a>
               </div>
               <div class="hero-proof"><span class="proof-symbol">✧</span><span>Rancangan modern</span><span class="proof-separator"></span><span>Responsif di semua layar</span></div>
             </div>
@@ -53,31 +54,47 @@
               <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
               <span class="art-star star-one">✦</span><span class="art-star star-two">✧</span><span class="art-star star-three">✦</span>
               <div class="art-chip chip-top"><span>⚡</span> INSTANT VIBES</div>
-              <div class="art-core"><div class="art-core-inner"><span>NAZ</span><strong>PLAY</strong></div></div>
+              <div class="art-core"><div class="art-core-inner"><span>NAZ</span><strong>PB HUB</strong></div></div>
               <div class="art-chip chip-bottom"><span>◈</span> NEXT LEVEL</div>
             </div>
           </section>
 
           <div class="feature-strip" aria-label="Keunggulan Naz-Store">
             <div><span class="feature-icon">⚡</span><span><strong>Alur Cepat</strong><small>Pilih dan pesan dalam beberapa langkah</small></span></div>
-            <div><span class="feature-icon">◈</span><span><strong>Banyak Pilihan</strong><small>Game populer dalam satu katalog</small></span></div>
+            <div><span class="feature-icon">◈</span><span><strong>Spesialis PB</strong><small>PB Cash, voucher, dan katalog char</small></span></div>
             <div><span class="feature-icon">✧</span><span><strong>Mobile Friendly</strong><small>Nyaman dipakai di mana saja</small></span></div>
           </div>
 
           <section class="catalog-section" id="games" aria-labelledby="catalog-title">
             <div class="section-heading">
-              <div><span class="section-kicker">PILIH DUNIAMU</span><h2 id="catalog-title">Game <span>Populer.</span></h2><p>Temukan game favoritmu dan mulai dari sini.</p></div>
-              <div class="catalog-search"><span aria-hidden="true">⌕</span><label class="sr-only" for="game-search">Cari game</label><input id="game-search" type="search" placeholder="Cari game favoritmu..." autocomplete="off" /></div>
+              <div><span class="section-kicker">TOP UP POINT BLANK</span><h2 id="catalog-title">PB Cash & <span>Voucher.</span></h2><p>Pilih metode pengisian atau voucher digital yang ingin dicoba.</p></div>
+              <div class="catalog-search"><span aria-hidden="true">⌕</span><label class="sr-only" for="game-search">Cari produk PB</label><input id="game-search" type="search" placeholder="Cari produk Point Blank..." autocomplete="off" /></div>
             </div>
             <div class="category-tabs" id="category-tabs" role="group" aria-label="Kategori game">
-              <button class="category-chip active" data-category="Semua" aria-pressed="true">Semua Game</button>
-              <button class="category-chip" data-category="MOBA" aria-pressed="false">MOBA</button>
-              <button class="category-chip" data-category="Battle Royale" aria-pressed="false">Battle Royale</button>
-              <button class="category-chip" data-category="PC & Lainnya" aria-pressed="false">PC & Lainnya</button>
+              <button class="category-chip active" data-category="Semua" aria-pressed="true">Semua Produk</button>
+              <button class="category-chip" data-category="PB Cash" aria-pressed="false">PB Cash</button>
+              <button class="category-chip" data-category="Voucher" aria-pressed="false">Voucher / E-PIN</button>
             </div>
             <div class="game-grid" id="game-grid" aria-live="polite"></div>
             <p class="no-results" id="no-results" hidden>Game tidak ditemukan. Coba kata kunci lain.</p>
             <p class="catalog-note">* Produk dan harga pada prototipe ini hanya contoh untuk pembelajaran.</p>
+          </section>
+
+          <section class="account-section" id="accounts" aria-labelledby="account-section-title">
+            <div class="section-heading">
+              <div><span class="section-kicker">GALERI KARAKTER PB</span><h2 id="account-section-title">Katalog <span>Char PB.</span></h2><p>Contoh tampilan informasi pangkat, statistik, dan koleksi karakter.</p></div>
+              <div class="catalog-search"><span aria-hidden="true">⌕</span><label class="sr-only" for="account-search">Cari profil char PB</label><input id="account-search" type="search" placeholder="Cari pangkat char PB..." autocomplete="off" /></div>
+            </div>
+            <div class="marketplace-notice"><span aria-hidden="true">ⓘ</span><span><strong>Mode konsep:</strong> seluruh char, statistik, dan harga di bawah fiktif. Zepetto tidak merekomendasikan jual-beli ID/karakter, sehingga Naz-Store belum menerima transaksi akun atau data login.</span></div>
+            <div class="account-filters" id="account-filters" role="group" aria-label="Jenis akun">
+              <button class="category-chip active" type="button" data-account-category="Semua" aria-pressed="true">Semua Pangkat</button>
+              <button class="category-chip" type="button" data-account-category="Major" aria-pressed="false">Major</button>
+              <button class="category-chip" type="button" data-account-category="Colonel" aria-pressed="false">Colonel</button>
+              <button class="category-chip" type="button" data-account-category="General" aria-pressed="false">General</button>
+              <button class="category-chip" type="button" data-account-category="Commander" aria-pressed="false">Commander</button>
+            </div>
+            <div class="account-grid" id="account-grid" aria-live="polite"></div>
+            <p class="no-results" id="no-account-results" hidden>Belum ada listing yang cocok dengan pencarianmu.</p>
           </section>
 
           <section class="how-section" id="how-section" aria-labelledby="how-title">
@@ -103,8 +120,8 @@
               <div class="package-grid" id="package-grid"></div>
             </section>
             <section class="checkout-panel" aria-labelledby="account-title">
-              <div class="panel-title"><span class="number-pill">02</span><div><h2 id="account-title">Data Akun Game</h2><p>Masukkan ID akun game yang akan diisi.</p></div></div>
-              <div class="fields-grid"><label class="field"><span>User ID <span class="required">*</span></span><input id="player-id" type="text" maxlength="32" placeholder="Contoh: 12345678" autocomplete="off" required /></label><label class="field" id="zone-field"><span>Zone / Server ID</span><input id="zone-id" type="text" maxlength="24" placeholder="Contoh: 1234" autocomplete="off" /></label></div>
+              <div class="panel-title"><span class="number-pill">02</span><div><h2 id="account-title">ID Zepetto (Demo)</h2><p id="account-subtitle">Masukkan contoh ID akun game, tanpa kata sandi.</p></div></div>
+              <div class="fields-grid"><label class="field" id="player-field"><span>ID Zepetto <span class="required">*</span></span><input id="player-id" type="text" maxlength="32" placeholder="Contoh: trooper123" autocomplete="off" required /></label><label class="field" id="zone-field"><span>Zone / Server ID</span><input id="zone-id" type="text" maxlength="24" placeholder="Contoh: 1234" autocomplete="off" /></label></div>
               <p class="field-help">Gunakan data contoh untuk mencoba simulasi. Tidak ada data dikirim ke server.</p>
             </section>
             <section class="checkout-panel" aria-labelledby="payment-title">
@@ -129,6 +146,11 @@
         </div>
       </section>
 
+      <section class="account-detail-page container" id="account-detail-page" hidden aria-labelledby="account-detail-title">
+        <a class="back-link" href="#accounts">← Kembali ke katalog char PB</a>
+        <div id="account-detail-content"></div>
+      </section>
+
       <section class="orders-page container" id="orders-page" hidden aria-labelledby="orders-title">
         <a class="back-link" href="#home">← Kembali ke beranda</a>
         <div class="orders-header"><span class="section-kicker">PANTAU PESANAN</span><h1 id="orders-title">Cek <span>Pesanan.</span></h1><p>Masukkan kode pesanan demo untuk melihat ringkasannya. Data hanya tersimpan di browser ini.</p></div>
@@ -138,8 +160,9 @@
       </section>
     </main>
 
-    <footer class="site-footer"><div class="container footer-inner"><div><a class="brand" href="#home"><span class="brand-icon"><span>N</span></span><span>NAZ<span class="brand-accent">.</span>STORE</span></a><p>Tempat semua gamers memulai petualangan berikutnya.</p></div><div class="footer-links"><a href="#games">Katalog Game</a><a href="#how-it-works">Cara Top Up</a><a href="#orders">Cek Pesanan</a></div></div><div class="container footer-bottom"><span>© <span id="current-year">2026</span> Naz-Store. Dibuat untuk belajar web development.</span><span>Prototype • Not for real transactions</span></div></footer>
+    <footer class="site-footer"><div class="container footer-inner"><div><a class="brand" href="#home"><span class="brand-icon"><span>N</span></span><span>NAZ<span class="brand-accent">.</span>STORE</span></a><p>Prototipe komunitas Point Blank independen. Tidak berafiliasi dengan Zepetto.</p></div><div class="footer-links"><a href="#games">Top Up PB</a><a href="#accounts">Katalog Char PB</a><a href="#how-it-works">Cara Top Up</a><a href="#orders">Cek Pesanan</a></div></div><div class="container footer-bottom"><span>© <span id="current-year">2026</span> Naz-Store. Dibuat untuk belajar web development.</span><span>Prototype • Not for real transactions</span></div></footer>
 
     <div class="modal-backdrop" id="success-modal" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-icon">✓</div><span class="section-kicker">SIMULASI BERHASIL</span><h2 id="modal-title">Pesanan demo dibuat!</h2><p>Pesanan ini hanya tersimpan di browsermu. Belum ada pembayaran atau pengiriman item game.</p><div class="modal-code" id="created-order-code"></div><button class="button button-primary" id="view-created-order">Lihat Pesanan →</button><button class="modal-close" id="modal-close">Kembali ke Katalog</button></div></div>
+    <div class="modal-backdrop" id="account-modal" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="account-modal-title"><div class="modal-icon">ⓘ</div><span class="section-kicker">FITUR DALAM PERENCANAAN</span><h2 id="account-modal-title">Marketplace masih demo</h2><p>Belum ada transaksi atau transfer akun. Sebelum membuka penawaran sungguhan, setiap game harus lolos pemeriksaan ketentuan penerbit dan keamanan pengguna.</p><button class="button button-primary" id="close-account-modal">Mengerti</button></div></div>
   </body>
 </html>
