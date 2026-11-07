@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#080e1c" />
-    <meta name="description" content="Naz-Store, prototipe khusus Point Blank: top up PB Cash, voucher, dan katalog karakter PB fiktif." />
+    <meta name="description" content="Naz-Store, fan hub Point Blank dengan simulasi top up PB Cash, katalog karakter, serta info Season Pass Deadlock November–Desember 2026." />
     <title>Naz-Store | Point Blank Hub</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./pb-events.css" />
     <script src="./app.js" defer></script>
   </head>
   <body>
@@ -25,12 +26,13 @@
         </a>
         <nav class="main-nav" aria-label="Navigasi utama">
           <a href="#home" data-nav="home" class="nav-active">Beranda</a>
+          <a href="#events" data-nav="events">Event PB</a>
           <a href="#accounts" data-nav="accounts">Char PB</a>
           <a href="#how-it-works" data-nav="how-it-works">Cara Top Up</a>
           <a href="#orders" data-nav="orders">Cek Pesanan</a>
         </nav>
         <div class="header-actions">
-          <span class="header-secure"><span class="secure-icon">✦</span> Digital Game Hub</span>
+          <span class="official-game-mark"><img src="https://media2.giphy.com/avatars/pbzepetto/YHlS786ZIybn.png" alt="Logo Point Blank" loading="lazy" /><span>PB FAN HUB</span></span>
           <a class="button button-small button-outline" href="#orders">Lacak Pesanan <span aria-hidden="true">↗</span></a>
         </div>
       </div>
@@ -41,21 +43,22 @@
         <div class="container">
           <section class="hero" aria-labelledby="hero-title">
             <div class="hero-copy">
-              <div class="eyebrow"><span class="eyebrow-line"></span> KHUSUS TROOPERS POINT BLANK</div>
+              <div class="eyebrow"><span class="eyebrow-line"></span> FAN HUB UNTUK TROOPERS POINT BLANK</div>
               <h1 id="hero-title">Your Point Blank hub.<br /><span>Ready for action.</span></h1>
               <p>Satu tempat untuk menjelajahi pilihan PB Cash, voucher, dan katalog contoh karakter Point Blank. Dibangun khusus untuk komunitas Troopers.</p>
               <div class="hero-actions">
                 <a href="#games" class="button button-primary">Top Up PB <span aria-hidden="true">↗</span></a>
                 <a href="#accounts" class="button button-ghost">Lihat Char PB <span aria-hidden="true">→</span></a>
               </div>
-              <div class="hero-proof"><span class="proof-symbol">✧</span><span>Rancangan modern</span><span class="proof-separator"></span><span>Responsif di semua layar</span></div>
+              <div class="hero-proof"><span class="proof-symbol">✧</span><span>Info event terbaru</span><span class="proof-separator"></span><span>Komunitas Point Blank</span></div>
             </div>
-            <div class="hero-art" aria-hidden="true">
-              <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-              <span class="art-star star-one">✦</span><span class="art-star star-two">✧</span><span class="art-star star-three">✦</span>
-              <div class="art-chip chip-top"><span>⚡</span> INSTANT VIBES</div>
-              <div class="art-core"><div class="art-core-inner"><span>NAZ</span><strong>PB HUB</strong></div></div>
-              <div class="art-chip chip-bottom"><span>◈</span> NEXT LEVEL</div>
+            <div class="hero-art">
+              <div class="hero-image-frame">
+                <img src="https://api.duniagames.co.id/api/content/upload/file/4406663271655801321.jpg" alt="Artwork Tarantula, karakter Point Blank Beyond Limits" fetchpriority="high" />
+                <span class="hero-image-corner">PB // TROOPERS</span>
+              </div>
+              <div class="hero-rank-chip" aria-hidden="true"><span>✦</span> BATTLE READY</div>
+              <span class="hero-image-credit">Art karakter: Point Blank / Zepetto</span>
             </div>
           </section>
 
@@ -64,6 +67,37 @@
             <div><span class="feature-icon">◈</span><span><strong>Spesialis PB</strong><small>PB Cash, voucher, dan katalog char</small></span></div>
             <div><span class="feature-icon">✧</span><span><strong>Mobile Friendly</strong><small>Nyaman dipakai di mana saja</small></span></div>
           </div>
+
+          <section class="event-section" id="events" aria-labelledby="events-title">
+            <div class="section-heading event-heading">
+              <div><span class="section-kicker">PB EVENT RADAR · UPDATE 7 NOV 2026</span><h2 id="events-title">Lagi rame di <span>Point Blank.</span></h2><p>Agenda Season Pass dan promo PB. Jadwal bisa berubah mengikuti pengumuman penerbit.</p></div>
+              <a class="event-source-link" href="https://www.pointblank.id/news/list" target="_blank" rel="noopener noreferrer">Berita resmi PB <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="event-grid">
+              <article class="event-main-card">
+                <div class="event-main-copy">
+                  <div class="event-topline"><span class="event-tag">SEASON PASS 23</span><span class="event-live" id="season-status">CEK PERIODE</span></div>
+                  <h3>DEADLOCK<span class="event-dot">.</span></h3>
+                  <p class="event-lead">Season Pass terbaru dengan deretan senjata Deadlock, karakter spesial, dan hadiah permanen melalui progres level.</p>
+                  <div class="event-stats"><div><strong>03 NOV — 22 DES</strong><small>Periode 2026</small></div><div><strong>70 LEVEL</strong><small>50 hari event</small></div></div>
+                  <div class="event-actions"><a class="button button-primary" href="#games">Siapkan PB Cash <span aria-hidden="true">↗</span></a><a class="event-text-link" href="https://www.ggwp.id/esports/shooter/pre-order-season-pass-deadlock-point-blank-dibuka-cuma-9-000-pb-cash-00-c57ll-1837n0" target="_blank" rel="noopener noreferrer">Detail Season Pass ↗</a></div>
+                </div>
+                <div class="event-main-art">
+                  <img src="https://image.ggwp.id/post/20261027/your-paragraph-text-2_150ce67e-b648-4129-b0a1-e047627e9c95.jpg" alt="Artwork promosi Season Pass Deadlock Point Blank 2026" loading="lazy" />
+                  <span class="event-art-label">POINT BLANK · SEASON 23</span>
+                </div>
+              </article>
+              <article class="event-sale-card">
+                <div class="event-topline"><span class="event-tag sale-tag">LIMITED EVENT</span><span class="event-live" id="sale-status">CEK PERIODE</span></div>
+                <div class="sale-number">50<span>%</span><small>OFF</small></div>
+                <h3>Premium Shop Sale</h3>
+                <p>Diskon untuk 10 item pilihan, termasuk Kriss S.V Silence, AUG A3, dan Barrett Deadlock. Khusus pemilik Premium Season Pass.</p>
+                <div class="sale-footer"><span>03—09 NOV 2026</span><span id="sale-remaining">Batas 9 Nov, 23.59 WIB</span></div>
+                <a href="https://www.ggwp.id/esports/shooter/premium-shop-sale-point-blank-diskon-50-persen-00-c57ll-nm30fx" target="_blank" rel="noopener noreferrer" class="event-sale-link">Baca detail & syarat <span aria-hidden="true">↗</span></a>
+              </article>
+            </div>
+            <p class="event-disclaimer">Informasi event bersifat editorial, bukan penjualan item oleh Naz-Store. Pembelian Season Pass dan item event dilakukan melalui kanal resmi Point Blank. Informasi diperbarui manual per 7 November 2026.</p>
+          </section>
 
           <section class="catalog-section" id="games" aria-labelledby="catalog-title">
             <div class="section-heading">
@@ -86,6 +120,10 @@
               <div class="catalog-search"><span aria-hidden="true">⌕</span><label class="sr-only" for="account-search">Cari profil char PB</label><input id="account-search" type="search" placeholder="Cari pangkat char PB..." autocomplete="off" /></div>
             </div>
             <div class="marketplace-notice"><span aria-hidden="true">ⓘ</span><span><strong>Mode konsep:</strong> seluruh char, statistik, dan harga di bawah fiktif. Zepetto tidak merekomendasikan jual-beli ID/karakter, sehingga Naz-Store belum menerima transaksi akun atau data login.</span></div>
+            <div class="pb-character-feature">
+              <div class="pb-character-photo"><img src="https://cdn2.pointblank.id/Web/upload/image/20190617/af7d78110a794c77ed5d668de5e78c6806d9b83c76efb0fb2bc650858af5d8c3.jpg" alt="Tampilan karakter Point Blank: Rica, Keen Eyes, dan Tarantula dalam kostum Army Chic" loading="lazy" /></div>
+              <div class="pb-character-caption"><span class="section-kicker">ORIGINAL GAME ARTWORK</span><strong>Meet the Troopers.</strong><span>Rica · Keen Eyes · Tarantula</span><small>Arsip visual karakter dari situs resmi Point Blank (2019). Gambar ini bukan akun atau item yang dijual.</small></div>
+            </div>
             <div class="account-filters" id="account-filters" role="group" aria-label="Jenis akun">
               <button class="category-chip active" type="button" data-account-category="Semua" aria-pressed="true">Semua Pangkat</button>
               <button class="category-chip" type="button" data-account-category="Major" aria-pressed="false">Major</button>
@@ -160,7 +198,7 @@
       </section>
     </main>
 
-    <footer class="site-footer"><div class="container footer-inner"><div><a class="brand" href="#home"><span class="brand-icon"><span>N</span></span><span>NAZ<span class="brand-accent">.</span>STORE</span></a><p>Prototipe komunitas Point Blank independen. Tidak berafiliasi dengan Zepetto.</p></div><div class="footer-links"><a href="#games">Top Up PB</a><a href="#accounts">Katalog Char PB</a><a href="#how-it-works">Cara Top Up</a><a href="#orders">Cek Pesanan</a></div></div><div class="container footer-bottom"><span>© <span id="current-year">2026</span> Naz-Store. Dibuat untuk belajar web development.</span><span>Prototype • Not for real transactions</span></div></footer>
+    <footer class="site-footer"><div class="container footer-inner"><div><a class="brand" href="#home"><span class="brand-icon"><span>N</span></span><span>NAZ<span class="brand-accent">.</span>STORE</span></a><p>Fan hub independen. Logo Point Blank, nama game, dan artwork karakter milik pemegang hak terkait; Naz-Store tidak berafiliasi dengan Zepetto.</p></div><div class="footer-links"><a href="#events">Event PB</a><a href="#games">Top Up PB</a><a href="#accounts">Char PB</a><a href="#orders">Cek Pesanan</a></div></div><div class="container footer-bottom"><span>© <span id="current-year">2026</span> Naz-Store. Dibuat untuk belajar web development.</span><span>Prototype • Not for real transactions</span></div></footer>
 
     <div class="modal-backdrop" id="success-modal" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-icon">✓</div><span class="section-kicker">SIMULASI BERHASIL</span><h2 id="modal-title">Pesanan demo dibuat!</h2><p>Pesanan ini hanya tersimpan di browsermu. Belum ada pembayaran atau pengiriman item game.</p><div class="modal-code" id="created-order-code"></div><button class="button button-primary" id="view-created-order">Lihat Pesanan →</button><button class="modal-close" id="modal-close">Kembali ke Katalog</button></div></div>
     <div class="modal-backdrop" id="account-modal" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="account-modal-title"><div class="modal-icon">ⓘ</div><span class="section-kicker">FITUR DALAM PERENCANAAN</span><h2 id="account-modal-title">Marketplace masih demo</h2><p>Belum ada transaksi atau transfer akun. Sebelum membuka penawaran sungguhan, setiap game harus lolos pemeriksaan ketentuan penerbit dan keamanan pengguna.</p><button class="button button-primary" id="close-account-modal">Mengerti</button></div></div>
